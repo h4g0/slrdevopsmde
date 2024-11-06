@@ -1,0 +1,3 @@
+DevOps AND ("model-driven" OR "model driven")
+((DevOps OR MLOps OR ChainOps OR DevSecOps OR CloudOps OR AIOps OR  DataOps) AND ("model-driven" OR "model driven"))
+
