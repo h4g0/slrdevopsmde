@@ -1,0 +1,17 @@
+{
+  
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A bar chart with highlighting on hover and selecting on click. (Inspired by Tableau's interaction style.)",
+  "data": {
+    "values": [
+          {"validation": "toy example" , "count": 9},{"validation": "case study" , "count": 15},{"validation": "none" , "count": 4},{"validation": "user study" , "count": 1},{"validation": "automated evaluation" , "count": 1}
+        ]
+  },
+  "mark":  {"type": "bar", "size": 20},
+  "encoding": {
+    "x": {"field": "validation", "type": "ordinal","scale": {"padding": 5}, "sort": "-y"},
+    "y": {"field": "count", "type": "quantitative", "stack": false}
+  }
+  
+}
+

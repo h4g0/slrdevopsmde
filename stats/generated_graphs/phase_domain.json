@@ -1,0 +1,17 @@
+{
+  
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A bar chart with highlighting on hover and selecting on click. (Inspired by Tableau's interaction style.)",
+  "data": {
+    "values": [
+          {"phase_domain": "Cloud, ci,cd" , "count": 7},{"phase_domain": "Cloud, cd" , "count": 5},{"phase_domain": "Generic, all" , "count": 4},{"phase_domain": "IoT, cd" , "count": 2},{"phase_domain": "Cyber-Physical Systems, cdev,ct,cm" , "count": 2}
+        ]
+  },
+  "mark":  {"type": "bar", "size": 20},
+  "encoding": {
+    "x": {"field": "phase_domain", "type": "ordinal","scale": {"padding": 5}, "sort": "-y"},
+    "y": {"field": "count", "type": "quantitative", "stack": false}
+  }
+  
+}
+
