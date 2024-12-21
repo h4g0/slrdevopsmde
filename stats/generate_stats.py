@@ -11,7 +11,7 @@ def stats_column_count(col,df,max=-1):
     write_to_file(get_count_col(col,df[col],max),f"{graph_folder}/{col}.json")
 
 def get_stats(df):
-  cols = ["year", "domain", "phase", "validation", "type", "goal", "m2m", "m2t", "t2m", "restrictions"]
+  cols = ["year", "domain", "phase", "validation", "type", "goal", "m2m", "m2t", "t2m", "restrictions","year"]
 
   for col in cols:
     stats_column_count(col,df)
