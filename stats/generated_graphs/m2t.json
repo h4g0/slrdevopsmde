@@ -1,17 +1,18 @@
 {
-  
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "A bar chart with highlighting on hover and selecting on click. (Inspired by Tableau's interaction style.)",
-  "data": {
-    "values": [
-          {"m2t": "True" , "count": 23},{"m2t": "False" , "count": 7}
-        ]
-  },
-  "mark":  {"type": "bar", "size": 20},
-  "encoding": {
-    "x": {"field": "m2t", "type": "ordinal","scale": {"padding": 5}, "sort": "-y"},
-    "y": {"field": "count", "type": "quantitative", "stack": false}
-  }
-  
-}
+      
+      "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+      "description": "A bar chart with highlighting on hover and selecting on click. (Inspired by Tableau's interaction style.)",
+      "data": {
+        "values": [
+              {"m2t": "True" , "count": 22},{"m2t": "False" , "count": 6}
+            ]
+      },
+      "mark":  {"type": "bar", "size": 20},
+      "encoding": {
+        "x": {"field": "m2t", "type": "ordinal","scale": {"padding": 5}, "sort": "-y"},
+        "y": {"field": "count", "type": "quantitative", "stack": false}
+      }
+      
+    }
 
+    

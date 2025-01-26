@@ -1,17 +1,18 @@
 {
-  
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "A bar chart with highlighting on hover and selecting on click. (Inspired by Tableau's interaction style.)",
-  "data": {
-    "values": [
-          {"domain": "Cloud" , "count": 13},{"domain": "Generic" , "count": 7},{"domain": "Safety-Crytical Systems" , "count": 1},{"domain": "Iot" , "count": 1},{"domain": "IoT" , "count": 3},{"domain": "Data Science" , "count": 1},{"domain": "Cyber-Physical Systems" , "count": 2},{"domain": "Security" , "count": 2}
-        ]
-  },
-  "mark":  {"type": "bar", "size": 20},
-  "encoding": {
-    "x": {"field": "domain", "type": "ordinal","scale": {"padding": 5}, "sort": "-y"},
-    "y": {"field": "count", "type": "quantitative", "stack": false}
-  }
-  
-}
+      
+      "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+      "description": "A bar chart with highlighting on hover and selecting on click. (Inspired by Tableau's interaction style.)",
+      "data": {
+        "values": [
+              {"domain": "Cloud" , "count": 13},{"domain": "Generic" , "count": 6},{"domain": "Safety-Crytical Systems" , "count": 1},{"domain": "IoT" , "count": 4},{"domain": "Data Science" , "count": 1},{"domain": "Security" , "count": 2},{"domain": "Cyber-Physical Systems" , "count": 1}
+            ]
+      },
+      "mark":  {"type": "bar", "size": 20},
+      "encoding": {
+        "x": {"field": "domain", "type": "ordinal","scale": {"padding": 5}, "sort": "-y"},
+        "y": {"field": "count", "type": "quantitative", "stack": false}
+      }
+      
+    }
 
+    

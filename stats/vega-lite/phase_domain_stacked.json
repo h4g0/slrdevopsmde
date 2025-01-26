@@ -1,0 +1,49 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "values": [
+        {"domain":"Cloud", "phase":"CD", "value":13},
+        {"domain":"Cloud", "phase":"CI", "value":8},
+        {"domain":"DA", "phase":"CI", "value":5},
+        {"domain":"DA", "phase":"CD", "value":5},
+        {"domain":"SCS", "phase":"CT", "value":1},
+        {"domain":"SCS", "phase":"CI", "value":1},
+        {"domain":"SCS", "phase":"CD", "value":1},
+        {"domain":"IoT", "phase":"CI", "value":2},
+        {"domain":"IoT", "phase":"CD", "value":4},
+        {"domain":"DA", "phase":"CDEV", "value":3},
+        {"domain":"DA", "phase":"CT", "value":3},
+        {"domain":"DA", "phase":"CO", "value":4},
+        {"domain":"DA", "phase":"CM", "value":3},
+        {"domain":"DA", "phase":"CF", "value":3},
+        {"domain":"DS", "phase":"CD", "value":1},
+        {"domain":"DS", "phase":"CI", "value":1},
+        {"domain":"DS", "phase":"CDEV", "value":1},
+        {"domain":"DS", "phase":"CT", "value":1},
+        {"domain":"DS", "phase":"CO", "value":1},
+        {"domain":"DS", "phase":"CM", "value":1},
+        {"domain":"DS", "phase":"CF", "value":1},
+        {"domain":"Security", "phase":"CD", "value":2},
+        {"domain":"Security", "phase":"CI", "value":2},
+        {"domain":"Security", "phase":"CDEV", "value":2},
+        {"domain":"Security", "phase":"CT", "value":2},
+        {"domain":"Security", "phase":"CO", "value":2},
+        {"domain":"Security", "phase":"CM", "value":2},
+        {"domain":"Security", "phase":"CF", "value":2},
+        {"domain":"DS", "phase":"CDEV", "value":1},
+        {"domain":"DS", "phase":"CT", "value":1},
+        {"domain":"DS", "phase":"CM", "value":1}
+      ]
+    },
+    "transform": [
+      {"filter": "datum.value > 0"}
+    ],
+    "mark": "bar",
+    "encoding": {
+      "x": {"field": "phase", "type": "nominal", "axis": {"title": "phase"}},
+      "y": {"field": "value", "type": "quantitative", "axis": {"title": "value"}},
+      "color": {"field": "domain", "type": "nominal", "legend": {"title": "domain"}}
+    }
+  }
+  
+  

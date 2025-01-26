@@ -1,17 +1,18 @@
 {
-  
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "A bar chart with highlighting on hover and selecting on click. (Inspired by Tableau's interaction style.)",
-  "data": {
-    "values": [
-          {"phase": "cd" , "count": 7},{"phase": "ci, cd" , "count": 1},{"phase": "ci,cd" , "count": 10},{"phase": "ct,ci,cd" , "count": 1},{"phase": "all" , "count": 7},{"phase": "cdev,ct,cm" , "count": 2},{"phase": "co" , "count": 1},{"phase": "ci/cd" , "count": 1}
-        ]
-  },
-  "mark":  {"type": "bar", "size": 20},
-  "encoding": {
-    "x": {"field": "phase", "type": "ordinal","scale": {"padding": 5}, "sort": "-y"},
-    "y": {"field": "count", "type": "quantitative", "stack": false}
-  }
-  
-}
+      
+      "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+      "description": "A bar chart with highlighting on hover and selecting on click. (Inspired by Tableau's interaction style.)",
+      "data": {
+        "values": [
+              {"phase": "CD" , "count": 26},{"phase": "CI" , "count": 19},{"phase": "CT" , "count": 8},{"phase": "CDEV" , "count": 7},{"phase": "CO" , "count": 7},{"phase": "CM" , "count": 7},{"phase": "CF" , "count": 6}
+            ]
+      },
+      "mark":  {"type": "bar", "size": 20},
+      "encoding": {
+        "x": {"field": "phase", "type": "ordinal","scale": {"padding": 5}, "sort": "-y"},
+        "y": {"field": "count", "type": "quantitative", "stack": false}
+      }
+      
+    }
 
+    

@@ -1,17 +1,47 @@
 {
-  
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "A bar chart with highlighting on hover and selecting on click. (Inspired by Tableau's interaction style.)",
-  "data": {
-    "values": [
-          {"phase_domain": "Cloud, ci,cd" , "count": 7},{"phase_domain": "Cloud, cd" , "count": 5},{"phase_domain": "Generic, all" , "count": 4},{"phase_domain": "IoT, cd" , "count": 2},{"phase_domain": "Cyber-Physical Systems, cdev,ct,cm" , "count": 2}
-        ]
-  },
-  "mark":  {"type": "bar", "size": 20},
-  "encoding": {
-    "x": {"field": "phase_domain", "type": "ordinal","scale": {"padding": 5}, "sort": "-y"},
-    "y": {"field": "count", "type": "quantitative", "stack": false}
-  }
-  
-}
-
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "values": [
+        {"domain":"Cloud", "phase":"CD", "value":13},
+        {"domain":"Cloud", "phase":"CI", "value":8},
+        {"domain":"Generic", "phase":"CI", "value":5},
+        {"domain":"Generic", "phase":"CD", "value":5},
+        {"domain":"Safety-Crytical Systems", "phase":"CT", "value":1},
+        {"domain":"Safety-Crytical Systems", "phase":"CI", "value":1},
+        {"domain":"Safety-Crytical Systems", "phase":"CD", "value":1},
+        {"domain":"IoT", "phase":"CI", "value":2},
+        {"domain":"IoT", "phase":"CD", "value":4},
+        {"domain":"Generic", "phase":"CDEV", "value":3},
+        {"domain":"Generic", "phase":"CT", "value":3},
+        {"domain":"Generic", "phase":"CO", "value":4},
+        {"domain":"Generic", "phase":"CM", "value":3},
+        {"domain":"Generic", "phase":"CF", "value":3},
+        {"domain":"Data Science", "phase":"CD", "value":1},
+        {"domain":"Data Science", "phase":"CI", "value":1},
+        {"domain":"Data Science", "phase":"CDEV", "value":1},
+        {"domain":"Data Science", "phase":"CT", "value":1},
+        {"domain":"Data Science", "phase":"CO", "value":1},
+        {"domain":"Data Science", "phase":"CM", "value":1},
+        {"domain":"Data Science", "phase":"CF", "value":1},
+        {"domain":"Security", "phase":"CD", "value":2},
+        {"domain":"Security", "phase":"CI", "value":2},
+        {"domain":"Security", "phase":"CDEV", "value":2},
+        {"domain":"Security", "phase":"CT", "value":2},
+        {"domain":"Security", "phase":"CO", "value":2},
+        {"domain":"Security", "phase":"CM", "value":2},
+        {"domain":"Security", "phase":"CF", "value":2},
+        {"domain":"Cyber-Physical Systems", "phase":"CDEV", "value":1},
+        {"domain":"Cyber-Physical Systems", "phase":"CT", "value":1},
+        {"domain":"Cyber-Physical Systems", "phase":"CM", "value":1}
+      ]
+    },
+    "transform": [
+      {"filter": "datum.value > 0"}
+    ],
+    "mark": "bar",
+    "encoding": {
+      "x": {"field": "phase", "type": "nominal", "axis": {"title": "phase"}},
+      "y": {"field": "value", "type": "quantitative", "axis": {"title": "value"}},
+      "color": {"field": "domain", "type": "nominal", "legend": {"title": "domain"}}
+    }
+    }
